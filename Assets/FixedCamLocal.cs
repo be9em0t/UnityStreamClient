@@ -4,7 +4,7 @@ using System.Collections;
 namespace MocapiLiveStream
 {
 
-    public class FixedCam : MonoBehaviour
+    public class FixedCamLocal : MonoBehaviour
     {
 
 
@@ -47,8 +47,9 @@ namespace MocapiLiveStream
 
             //Change Camera Poition
             GuiInput();
-            camPos = new Vector3(camPosX, camPosY, camPosZ);
-            transform.position = camPos;
+            //camPos = new Vector3(camPosX, camPosY, camPosZ);
+            //transform.position = camPos;
+            transform.localPosition = new Vector3(camPosX, camPosY, camPosZ);
         }
 
         //Process GUI input booleans
@@ -57,8 +58,8 @@ namespace MocapiLiveStream
 
             if (MocapiLiveStream.CameraGUI.Up == true) { camPosY = camPosY + 0.1f; }
             if (MocapiLiveStream.CameraGUI.Down == true) { camPosY = camPosY - 0.1f; }
-            if (MocapiLiveStream.CameraGUI.Left == true) { camPosX = camPosY + 0.1f; }
-            if (MocapiLiveStream.CameraGUI.Right == true) { camPosX = camPosY - 0.1f; }
+            if (MocapiLiveStream.CameraGUI.Left == true) { camPosZ = camPosZ + 0.1f; }
+            if (MocapiLiveStream.CameraGUI.Right == true) { camPosZ = camPosZ - 0.1f; }
 
         }
 
