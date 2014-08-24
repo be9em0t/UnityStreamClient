@@ -1,6 +1,7 @@
 Library/
 obj/
 Temp/
+Build/
 FBX.Sources/
 *.sln
 
