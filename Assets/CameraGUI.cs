@@ -4,66 +4,67 @@ using System.Collections;
 namespace MocapiLiveStream
 {
 
-public class CameraGUI : MonoBehaviour {
-	
-		int bottoMargin = 5;
-		int leftMargin = 5;
+    public class CameraGUI : MonoBehaviour
+    {
 
+        //Gui elements
+        public Texture2D controlTex_Up;
+        public Texture2D controlTex_Down;
+        public Texture2D controlTex_Left;
+        public Texture2D controlTex_Right;
+        public Texture2D controlTex_High;
+        public Texture2D controlTex_Low;
+        private int buttWH = 48;
+
+        //Values
+        public GUISkin MocapiSkin = null;
+        int bottomMargin = 21;
+        int leftMargin = 5;
+
+        //make values available in other scripts
         public static bool Up = false;
         public static bool Left = false;
         public static bool Right = false;
         public static bool Down = false;
-        public static bool Plus = false;
-        public static bool Minus = false;
+        public static bool High = false;
+        public static bool Low = false;
 
-		public static float Zoom = 60f;
-        public GUISkin MocapiSkin = null;
 
-		void OnGUI () {
+        void OnGUI()
+        {
 
             //Load the skin
             GUI.skin = MocapiSkin;
 
-//			// Make a background box
-//			GUI.Box(new Rect(10,10,100,90), "Loader Menu");
-//			
-            // Contents
-            GUI.Label(new Rect(0, 10, Screen.width, 100), "Mocapi Live Stream Client");
-			
-			// button up
-            if (GUI.RepeatButton(new Rect(leftMargin + 50, (Screen.height - bottoMargin) - 150, 50, 50), "Up")) { Up = true; }
+            // Viewport Label
+            //GUI.Label(new Rect(0, 10, Screen.width, 100), "Mocapi Live Stream Client");
+
+            // button up - camera forward
+            if (GUI.RepeatButton(new Rect(leftMargin + buttWH, Screen.height - bottomMargin - (buttWH * 3), buttWH, buttWH), controlTex_Up)) { Up = true; }
             else Up = false;
 
-            // button down
-            if (GUI.RepeatButton(new Rect(leftMargin + 50, (Screen.height - bottoMargin) - 50, 50, 50), "Down")) { Down = true; }
+            // button down - camera back
+            if (GUI.RepeatButton(new Rect(leftMargin + buttWH, Screen.height - bottomMargin - buttWH, buttWH, buttWH), controlTex_Down)) { Down = true; }
             else Down = false;
 
-			// button left
-            if (GUI.RepeatButton(new Rect(leftMargin + 0, (Screen.height - bottoMargin) - 100, 50, 50), "Left")) { Left = true; }
+            // button left - camera left
+            if (GUI.RepeatButton(new Rect(leftMargin, Screen.height - bottomMargin - (buttWH*2), buttWH, buttWH), controlTex_Left)) { Left = true; }
             else Left = false;
 
-			// button right
-            if (GUI.RepeatButton(new Rect(leftMargin + 100, (Screen.height - bottoMargin) - 100, 50, 50), "Right")) { Right = true; }
+            // button right - camera right
+            if (GUI.RepeatButton(new Rect(leftMargin + (buttWH * 2), Screen.height - bottomMargin - (buttWH * 2), buttWH, buttWH), controlTex_Right)) { Right = true; }
             else Right = false;
-			
 
-			// button zoom in
-			if(GUI.Button(new Rect((Screen.width - leftMargin) - 50,(Screen.height - bottoMargin) - 150,50,50), "In")) {
-				//MocapiLiveStream.Player.scalePlayer.y = MocapiLiveStream.Player.scalePlayer.y -.5f;
-				Zoom = Zoom - 2f;
-				//MocapiLiveStream.LookAtCamera.zoomly = MocapiLiveStream.LookAtCamera.zoomly +0.5f;				
-			}
-				
-			// button zoom out
-			if(GUI.Button(new Rect((Screen.width - leftMargin) - 50,(Screen.height - bottoMargin) - 50,50,50), "Out")) {
-				//MocapiLiveStream.Player.scalePlayer.y = MocapiLiveStream.Player.scalePlayer.y -.5f;
-				Zoom = Zoom + 2f;
-				//MocapiLiveStream.LookAtCamera.zoomly = MocapiLiveStream.LookAtCamera.zoomly -0.5f;				
-				
-			}
-			
-			
-	}
-}
-	
+
+            // button higher - camera up
+            if (GUI.Button(new Rect((Screen.width - leftMargin) - (buttWH * 2) + 16, Screen.height - bottomMargin - (buttWH * 3), buttWH, buttWH), controlTex_High)) { High = true; }
+            else High = false;
+
+            // button lower - camera down
+            if (GUI.Button(new Rect((Screen.width - leftMargin) - (buttWH * 2) + 16, Screen.height - bottomMargin - buttWH, buttWH, buttWH), controlTex_Low)) { Low = true; }
+            else Low = false;
+
+        }
+
+    }
 }

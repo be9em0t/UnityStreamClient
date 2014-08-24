@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{3192F1E4-7004-8C13-3E25-1301C9344A1D}</ProjectGuid>
+	<ProjectGuid>{F934FD6B-A36E-BB63-00CF-FAA66135981A}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,10 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraGUI.cs" />
      <Compile Include="Assets\DungeonCamera.cs" />
      <Compile Include="Assets\FixedCam.cs" />
+     <Compile Include="Assets\FixedCamLocal.cs" />
      <Compile Include="Assets\FollowCamera.cs" />
-     <Compile Include="Assets\Gui.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsDataPacket.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsEulerPacket.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsLiveAnimator.cs" />

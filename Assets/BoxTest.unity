@@ -337,6 +337,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MocapiSkin: {fileID: 0}
+  controlTex_Up: {fileID: 0}
+  controlTex_Down: {fileID: 0}
+  controlTex_Left: {fileID: 0}
+  controlTex_Right: {fileID: 0}
+  controlTex_High: {fileID: 0}
+  controlTex_Low: {fileID: 0}
 --- !u!1 &831905746
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +695,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50079b7cc8a226a4197d7c6be4bf9a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MocapiSkin: {fileID: 11400000, guid: b21ff24d093bfd240a7e3fd67506b266, type: 2}
+  MocapiSkin: {fileID: 11400000, guid: ca1c9528f9f36d740b506c24e53203b0, type: 2}
+  controlTex_Up: {fileID: 2800000, guid: 53557583109c35b46ab81085e6408347, type: 3}
+  controlTex_Down: {fileID: 2800000, guid: 08dbf83af6383924cb4adaf900855bad, type: 3}
+  controlTex_Left: {fileID: 2800000, guid: 882deb2d9b9c8674f833538c9ddacfc2, type: 3}
+  controlTex_Right: {fileID: 2800000, guid: 9fabdf97fe151aa4f95a3fdb78d92d7e, type: 3}
+  controlTex_High: {fileID: 2800000, guid: 98220b1d489c2b849af6fddc226fdfee, type: 3}
+  controlTex_Low: {fileID: 2800000, guid: 330fec1ececd43e4db2d7f5f03e6527c, type: 3}
 --- !u!1 &860775489
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +976,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MocapiSkin: {fileID: 0}
+  controlTex_Up: {fileID: 0}
+  controlTex_Down: {fileID: 0}
+  controlTex_Left: {fileID: 0}
+  controlTex_Right: {fileID: 0}
+  controlTex_High: {fileID: 0}
+  controlTex_Low: {fileID: 0}
 --- !u!1 &1606778013
 GameObject:
   m_ObjectHideFlags: 0

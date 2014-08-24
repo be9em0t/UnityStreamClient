@@ -13,7 +13,8 @@ public class LookAtCamera : MonoBehaviour {
 	void LateUpdate() {
 		transform.LookAt(target.transform);
 			//transform.Translate(transform.position.x, transform.position.y, transform.position.z);
-        camera.fieldOfView = MocapiLiveStream.CameraGUI.Zoom;
+        //value not available anymore:
+        //camera.fieldOfView = MocapiLiveStream.CameraGUI.Zoom;
 	}
 
 
