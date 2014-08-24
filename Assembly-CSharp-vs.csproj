@@ -46,11 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraGUI.cs" />
-     <Compile Include="Assets\DungeonCamera.cs" />
-     <Compile Include="Assets\FixedCam.cs" />
-     <Compile Include="Assets\FixedCamLocal.cs" />
-     <Compile Include="Assets\FollowCamera.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsDataPacket.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsEulerPacket.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsLiveAnimator.cs" />
@@ -58,10 +53,15 @@
      <Compile Include="Assets\LiveStream\Scripts\XsQuaternionPacket.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsStreamReader.cs" />
      <Compile Include="Assets\LiveStream\Scripts\XsStreamReaderThread.cs" />
-     <Compile Include="Assets\LookAtCamera.cs" />
-     <Compile Include="Assets\Player.cs" />
-     <Compile Include="Assets\VelocityDampCam.cs" />
-     <Compile Include="Assets\b9CameraControl.cs" />
+     <Compile Include="Assets\Scripts\CameraGUI.cs" />
+     <Compile Include="Assets\Scripts\DungeonCamera.cs" />
+     <Compile Include="Assets\Scripts\FixedCam.cs" />
+     <Compile Include="Assets\Scripts\FixedCamLocal.cs" />
+     <Compile Include="Assets\Scripts\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\VelocityDampCam.cs" />
+     <Compile Include="Assets\Scripts\b9CameraControl.cs" />
      <None Include="Assets\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

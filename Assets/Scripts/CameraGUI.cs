@@ -57,11 +57,11 @@ namespace MocapiLiveStream
 
 
             // button higher - camera up
-            if (GUI.Button(new Rect((Screen.width - leftMargin) - (buttWH * 2) + 16, Screen.height - bottomMargin - (buttWH * 3), buttWH, buttWH), controlTex_High)) { High = true; }
+            if (GUI.RepeatButton(new Rect((Screen.width - leftMargin) - (buttWH * 2) + 16, Screen.height - bottomMargin - (buttWH * 3), buttWH, buttWH), controlTex_High)) { High = true; }
             else High = false;
 
             // button lower - camera down
-            if (GUI.Button(new Rect((Screen.width - leftMargin) - (buttWH * 2) + 16, Screen.height - bottomMargin - buttWH, buttWH, buttWH), controlTex_Low)) { Low = true; }
+            if (GUI.RepeatButton(new Rect((Screen.width - leftMargin) - (buttWH * 2) + 16, Screen.height - bottomMargin - buttWH, buttWH, buttWH), controlTex_Low)) { Low = true; }
             else Low = false;
 
         }
